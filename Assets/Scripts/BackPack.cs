@@ -96,6 +96,7 @@ public class BackPack : MonoBehaviour
         vicinityItems.Remove(closesItem);
 
         UIReferences.instance.collectSound.Play();
+        Player.instance.characterController.SetTrigger("Pickup");
         BackpackVisualizer.instance.RefreshList();
     }
     public void DropItem(BaseItem item)
